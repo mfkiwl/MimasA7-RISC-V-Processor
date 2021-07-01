@@ -7,4 +7,3 @@
 *.runs
 *.sim
 vivado*
-CustomRiscV.xpr
