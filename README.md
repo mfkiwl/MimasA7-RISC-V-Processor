@@ -3,8 +3,8 @@ This repo contains a processor implementation of the RISC-V RV64I ISA specificat
 
 ## Future Goals
 My plan is to implement the RV64I base ISA, as well as the following extension ISAs, listed in order of priority:
-- C (Standard Extension for Compressed Instructions)
 - Zicsr (Control and Status Register (CSR))
+- C (Standard Extension for Compressed Instructions)
 - A (Standard Extension for Atomic Instructions)
 - M (Standard Extension for Integer Multiplication and Division)
 - F (Standard Extension for Single-Precision Floating-Point)
