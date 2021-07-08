@@ -6,6 +6,6 @@ module ProgramCounter(
 );
 
     always @(posedge clk)
-        nextPc <- pc;
+        nextPc <= pc;
 
 endmodule
