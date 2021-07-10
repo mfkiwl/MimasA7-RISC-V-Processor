@@ -12,10 +12,13 @@
 module ProgramCounter(
     input [63:0] nextPc,
     input clk,
-    output [63:0] pc
+    input stall, 
+    
+    output reg [63:0] pc
 );
 
     always @(posedge clk)
-        nextPc <= pc;
+        if (stall == 0)
+            nextPc <= pc;
 
 endmodule
