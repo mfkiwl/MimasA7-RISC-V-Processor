@@ -23,7 +23,7 @@ module Gp2to1Mux #(
         case(select)
             1'b0: out = a;
             1'b1: out = b;
-            default: dout = {WIDTH{1'bX}}; 
+            default: out = {WIDTH{1'bX}}; 
         endcase
     end
 
