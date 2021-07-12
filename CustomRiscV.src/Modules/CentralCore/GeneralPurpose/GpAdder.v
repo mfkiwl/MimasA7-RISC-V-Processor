@@ -1,12 +1,12 @@
 /**
-    File: GpAdder.v
-    Author: BlackIsDevin (https://github.com/BlackIsDevin)
-    Date: 6/30/2021
-    Target Devices:
-        Mimas A7 Revision V3 Development Board
-        Arty A7-35T Development Board (future target)
-    Description:
-        This module implements a general-purpose adder with configurable width.
+    This module implements a general-purpose adder with configurable width.
+    @author BlackIsDevin (https://github.com/BlackIsDevin)
+
+    @param WIDTH defines the width of the inputs and outputs
+    
+    @param a first input for the addition
+    @param b second input for the addition
+    @param s output of the addition of a and b
 */
 module GpAdder #(
     parameter WIDTH = 64
