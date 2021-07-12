@@ -1,13 +1,14 @@
 /**
-    File: PipelineRegIFID.v
-    Author: BlackIsDevin (https://github.com/BlackIsDevin)
-    Date: 7/10/2021
-    Target Devices:
-        Mimas A7 Revision V3 Development Board
-        Arty A7-35T Development Board (future target)
-    Description:
-        This modules implements the IF/ID pipeline register in our pipelined
+    This modules implements the IF/ID pipeline register in our pipelined
         RV64 CPU. This is effectively just an array of D flip flops.
+    @author BlackIsDevin (https://github.com/BlackIsDevin)
+
+    @param pc input program counter from fetch stage
+    @param inst input instruction from fetch stage
+    @param clk input clock signal
+    @param stall input signal for stalling the pipeline register
+    @param dpc output program counter for decode stage
+    @param dinst output instruction for decode stage
 */
 
 module PipelineRegIFID (
