@@ -43,7 +43,10 @@ module ControlUnit (
     output reg rSel,
     output reg wmem, m2reg, wreg,
     output reg [1:0] qaSel, qbSel,
+<<<<<<< HEAD
     output reg [2:0] immType,
+=======
+>>>>>>> bca60cce99a176c6f0cb01edf99a929eb9dc6541
     output reg isJalr, signedComp,
     output reg [1:0] pcSel,
     output reg pcStall, ifidStall
