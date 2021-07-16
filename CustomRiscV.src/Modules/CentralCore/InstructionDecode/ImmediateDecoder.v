@@ -9,7 +9,7 @@
         type
 */
 module ImmediateDecoder (
-    input [24:0] dinstTop,
+    input [31:7] dinstTop,
     input [2:0] immType,
 
     output [63:0] imm64

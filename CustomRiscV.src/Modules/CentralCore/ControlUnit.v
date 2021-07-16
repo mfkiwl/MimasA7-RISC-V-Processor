@@ -18,15 +18,15 @@
     @param wmem output write-enable for data memory
     @param m2reg output selextor for WB Mux, which selects data for writeback
     @param wreg output write-enable for the regfile
-    @param qaSel output selector for FWD A Mux, which handles forwarding the
-        value of A from the EXE or MEM stages to the ID stage if needed
-    @param qbSel output selector for FWD B Mux, which handles forwarding the
-        value of B from the EXE or MEM stages to the ID stage if needed
     @param immType output that determines the type of immediate we're using
     @param isJalr output selector for JALR Mux, which handles using the value
         of qa instead of dpc if executing a JALR vs a JAL instruction
     @param signedComp output control signal for comparator indicating whether
         the comparison should be signed or unsigned
+    @param qaSel output selector for FWD A Mux, which handles forwarding the
+        value of A from the EXE or MEM stages to the ID stage if needed
+    @param qbSel output selector for FWD B Mux, which handles forwarding the
+        value of B from the EXE or MEM stages to the ID stage if needed
     @param pcSel output selector for PCSel Mux, which handles selecting the
         value for the next PC
     @param pcStall output control signal for stalling the PC
@@ -42,11 +42,13 @@ module ControlUnit (
     output reg [2:0] aluc,
     output reg rSel,
     output reg wmem, m2reg, wreg,
-    output reg [1:0] qaSel, qbSel,
     output reg [2:0] immType,
     output reg isJalr, signedComp,
+    output reg [1:0] qaSel, qbSel,
     output reg [1:0] pcSel,
     output reg pcStall, ifidStall
 );
+
+
 
 endmodule
