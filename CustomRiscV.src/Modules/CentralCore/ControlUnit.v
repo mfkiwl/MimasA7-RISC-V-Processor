@@ -33,7 +33,10 @@
     @param ifidStall output control signal for stalling the IFID pipeline reg    
 */
 module ControlUnit (
-    input [31:0] dinst,
+    input [6:0] funct7,
+    input [4:0] rs2, rs1,
+    input [2:0] funct3,
+    input [6:0] opcode,
     input eq, lt,
     input [4:0] erd, mrd,
 
@@ -49,6 +52,38 @@ module ControlUnit (
     output reg pcStall, ifidStall
 );
 
+    always @(*) begin
+        case (opcode) 
+            7'b0110011: begin // register arithmetic operations
+                case (funct3)
+                    3'b000: begin // ADD & SUB
+
+                    end
+                    3'b111 begin // AND
+
+                    end
+                    3'b110 begin // OR
+
+                    end
+                    3'b100 begin // XOR
+
+                    end
+                    3'b001 begin // SLL
+
+                    end
+                    3'b101 begin // SRL & SRA
+
+                    end
+                    3'b010 begin // SLT
+
+                    end
+                    3'b011 begin // SLTU
+
+                    end
+                endcase
+            end
+        endcase
+    end
 
 
 endmodule
