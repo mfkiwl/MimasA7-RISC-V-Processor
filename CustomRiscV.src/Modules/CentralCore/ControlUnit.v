@@ -178,10 +178,10 @@ module ControlUnit (
             7'b0100011: begin // Stores
 
             end
-            7'b0001111: begin // FENCE
+            7'b0001111: begin // FENCE (no operation in our implementation)
 
             end
-            7'b1110011: begin // ECALL & EBREAK
+            7'b1110011: begin // ECALL & EBREAK (unimplemented in this version)
 
             end
             7'b0110111: begin // LUI
